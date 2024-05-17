@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+  
+  
+
+  <title>index.html - dragonback</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<style>
+@import url('https://hashsan.github.io/comad/dragonback.css');
+  
+#comadInput{
+  margin-top:2rem;
+  outline:1px solid;padding:1rem;border-radius:4px;  
+}
+
+#file{
+  font-size:0.8rem;
+  padding:4px;
+  background:transparent;
+  color:inherit;
+  border:unset;
+  border-bottom:2px solid;
+  outline:none;
+}
+</style>
+
+  
+  
+  
+</head>
+
+<body>
+  <body>
+  <div id="fullback"></div>
+<header></header>
+<main>
+  <input id="file" placeholder="exsample.md">
+  <nav class="col">
+    
+  </nav>
+</main>
+<footer>
+</footer>
+    
+</body>
+  
+      <script id="rendered-js" type="module">
+import "https://hashsan.github.io/writer/writer.js"
+load();
+
+async function load(){
+  const w = writer('hashsan','dragonback');
+  let res = await w.list()
+  let list = res.filter(d=>/\.md$/)
+   .map(d=>`<a href="edit.html?file=${d}">${d}</a>`)
+   .join('\n')
+  
+  document.querySelector('.col')
+   .innerHTML= list;
+  
+  
+  let $file=document.querySelector('#file')
+  $file.onchange=()=>{
+    const name = $file.value
+    if(!name)return;
+    let url = `edit.html?file=${name}`
+    location.href = url;
+  }
+  
+};
+    </script>
+
+  
+</body>
+
+</html>
