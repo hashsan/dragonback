@@ -29,6 +29,16 @@
   border-bottom:2px solid;
   outline:none;
 }
+
+#file {
+    margin-bottom: 0.5rem;
+}
+.col {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    /* margin-top: 0.5rem; */
+}  
 </style>
 
   
@@ -58,7 +68,7 @@ load();
 async function load(){
   const w = writer('hashsan','dragonback');
   let res = await w.list()
-  let list = res.filter(d=>/\.md$/)
+  let list = res.filter(d=>/\.md$/.test(d))
    .map(d=>`<a href="edit.html?file=${d}">${d}</a>`)
    .join('\n')
   
