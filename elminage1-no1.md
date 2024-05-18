@@ -152,6 +152,6 @@
 
 ![スタート画面のタイトル](https://raw.githubusercontent.com/hashsan/i/main/20240517_214110.jpg)
 
-音楽もなかなかクラシックを基準にしていて良いよ。
+音楽もなかなかクラシックを基準にしていて良い。
 
 [第２話に続く](edit.html?file=elminage1-no2.md)
