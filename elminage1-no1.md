@@ -154,4 +154,4 @@
 
 音楽もなかなかクラシックを基準にしていて良いよ。
 
-[第２話に続く](edit.html?elminage1-no2.md)
+[第２話に続く](edit.html?file=elminage1-no2.md)
