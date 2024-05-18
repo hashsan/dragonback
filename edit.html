@@ -69,11 +69,11 @@ async function load(){
   var autoWriter = writer('hashsan','dragonback')
   
   var data = await autoWriter.get(key)
-  if(data){
+  /*if(data){
     localStorage.setItem(key,data);
-  }
+  }*/
   //github.ioの場合はキー名を変える。
-  comadInput('#input','main',key)
+  comadInput('#input','main',key,data) //
 
   const $name = document.querySelector('#file');  
   //var name = autoWriter.name + '.md'
