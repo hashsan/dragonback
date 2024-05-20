@@ -71,9 +71,11 @@ async function load(){
   var autoWriter = writer('hashsan','dragonback')
   
   var data = await autoWriter.get(key)
-  /*if(data){
-    localStorage.setItem(key,data);
-  }*/
+  if(data){
+    //localStorage.setItem(key,data);
+    setCount(data.length) //
+  }
+  
   //github.ioの場合はキー名を変える。
   comadInput('#input','main',key,data) //
 
