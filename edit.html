@@ -51,6 +51,8 @@
   <div id="input"></div>
   <div class="r" id="nav">
     <label id="file">...</label>
+    <span> - </span>
+    <label id="count"></label>    
   </div>
 </footer>  
 </body>
@@ -82,13 +84,19 @@ async function load(){
   ctrl_s(async()=>{
     const text = localStorage.getItem(key)
     $name.style.color='#f26';
+    setCount(text.length) //
     await autoWriter.set(key,text)
     $name.style.color=''
   })  
 
 }
 
-
+//文字数表示
+function setCount(count){
+  const $count = document.querySelector('#count');  
+  $count.textContent = count; 
+}
+        
 //
 function ctrl_s(caller){
   const dde= document.documentElement  
